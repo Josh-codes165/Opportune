@@ -5,16 +5,30 @@ import Opportunity from './Components/Opportunity'
 import HIW from './Components/HIW'
 import STATS from './Components/STATS'
 import Footer from './Components/Footer'
+import { Routes, Route } from 'react-router-dom'
+import OpportunityList from './Pages/OpportunityList'
 
-function App() {
+
+function Home() {
   return (
     <>
-      <NavBar />
       <Hero />
       <Opportunity />
       <HIW/>
       <STATS/>
       <Footer/>
+    </>
+  )
+}
+
+function App() {
+  return (
+    <>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/OpportunityList" element={<OpportunityList />} />
+      </Routes>
     </>
   )
 }

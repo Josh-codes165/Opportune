@@ -1,5 +1,12 @@
+import { Link } from "react-router-dom";
+
 export default function NavBar() {
-  const links = ["Discover", "Categories", "How it works", "About"];
+ const links = [
+    { name: "Home", path: "/" },
+    { name: "Discover", path: "/OpportunityList" },
+    { name: "How it works", path: "/how-it-works" },
+    { name: "About", path: "/about" },
+  ];
 
   return (
     <div className="sticky top-0 z-50 border-b border-[#E7E5DF] bg-white/80 backdrop-blur-md">
@@ -10,13 +17,13 @@ export default function NavBar() {
 
         <ul className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
-            <li key={link}>
-             <a 
-                href="#"
+            <li key={link.path}>
+             <Link 
+                to={link.path}  
                 className="text-sm font-medium text-[#4B5157] transition-colors hover:text-[#10131A]"
               >
-                {link}
-              </a>
+                {link.name}
+              </Link>
             </li>
           ))}
         </ul>
