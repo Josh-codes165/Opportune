@@ -43,7 +43,7 @@ The project follows a component-based structure to keep the codebase organized, 
 ### Clone the repository
 
 ```bash
-git clone <your-repository-url>
+git clone <https://github.com/Josh-codes165/Opportune>
 ```
 
 ### Navigate into the project
