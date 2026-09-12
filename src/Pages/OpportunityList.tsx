@@ -33,7 +33,6 @@ export default function OpportunityList() {
 
   const toggleFilter = (
     value: string,
-    selected: string[],
     setSelected: React.Dispatch<React.SetStateAction<string[]>>
   ) => {
     setSelected((prev) =>
