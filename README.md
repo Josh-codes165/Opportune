@@ -1,75 +1,94 @@
-# React + TypeScript + Vite
+# Opportune
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Discover opportunities. Find what's next.**
 
-Currently, two official plugins are available:
+Opportune is a frontend project built to make it easier for people to discover and explore opportunities such as internships, jobs, scholarships, fellowships, hackathons, grants, and competitions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The project was created as a frontend challenge to practice building a real-world, responsive platform with search, filtering, opportunity discovery, and detailed opportunity pages.
 
-## React Compiler
+##  Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*  **Homepage** — Introduction to the platform and featured opportunities
+*  **Search** — Search opportunities by title, skill, company, or keyword
+*  **Filters** — Filter opportunities by category, location, experience level, and more
+*  **Opportunity Listings** — Browse available opportunities through organized cards
+*  **Opportunity Details** — View full information about an opportunity
+*  **Apply CTA** — Easily navigate to the application process
+*  **Responsive Design** — Optimized for desktop, tablet, and mobile devices
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* React
+* TypeScript
+* Tailwind CSS
+* Lucide React
+* Vite
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+##  Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+src/
+├── assets/
+├── components/
+├── pages/
+├── data/
+├── App.tsx
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+The project follows a component-based structure to keep the codebase organized, reusable, and easy to maintain.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+##  Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Clone the repository
 
+```bash
+git clone <your-repository-url>
 ```
+
+### Navigate into the project
+
+```bash
+cd opportune
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+The application will then be available through the local development URL provided by Vite.
+
+##  Project Goal
+
+The goal of Opportune is to create a simple and intuitive experience for discovering opportunities without overwhelming users with unnecessary information.
+
+This project also serves as a practical frontend challenge for improving my skills in:
+
+* React and TypeScript
+* Responsive UI development
+* Component architecture
+* Search and filtering logic
+* Routing and page navigation
+* Building interfaces from a product brief
+
+##  Status
+
+Opportune is currently a frontend project and is being developed as part of a frontend challenge.
+
+More features and improvements may be added as development continues.
+
+##  Author
+
+**Joshua Okoronkwo**
+
+Frontend Developer & Computer Engineering Student.
+
+Built with curiosity, code, and a little pressure from exam season.
