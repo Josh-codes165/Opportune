@@ -142,7 +142,7 @@ export default function OpportunityList() {
                       type="checkbox"
                       checked={selectedTypes.includes(option)}
                       onChange={() =>
-                        toggleFilter(option, selectedTypes, setSelectedTypes)
+                        toggleFilter(option, setSelectedTypes)
                       }
                       className="h-4 w-4 rounded border-[#D6D3CB] accent-[#F2A93C]"
                     />
@@ -166,7 +166,7 @@ export default function OpportunityList() {
                       type="checkbox"
                       checked={selectedLocations.includes(option)}
                       onChange={() =>
-                        toggleFilter(option, selectedLocations, setSelectedLocations)
+                        toggleFilter(option, setSelectedLocations)
                       }
                       className="h-4 w-4 rounded border-[#D6D3CB] accent-[#F2A93C]"
                     />

@@ -16,7 +16,6 @@ function Home() {
       <Opportunity />
       <HIW/>
       <STATS/>
-      <Footer/>
     </>
   )
 }
@@ -29,6 +28,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/OpportunityList" element={<OpportunityList />} />
       </Routes>
+      <Footer/>
+
     </>
   )
 }
