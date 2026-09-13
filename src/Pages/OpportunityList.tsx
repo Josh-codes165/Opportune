@@ -1,23 +1,14 @@
 import { useState, useMemo } from "react";
 import HeroImage from "../assets/hero1.jpg";
 import { Search, MapPin, ArrowUpRight } from "lucide-react";
+import {opportunities} from "../data/opportunity";
+import { Link } from "react-router-dom";
 
 export default function OpportunityList() {
   const filters = {
     Type: ["Internship", "Job", "Scholarship", "Competition"],
     Location: ["Remote", "Nigeria", "International"],
   };
-
-  const opportunities = [
-    { id: 1, type: "Internship", title: "Frontend Developer Intern", company: "TechNova", location: "Remote", salary: "₦200k – ₦300k/month" },
-    { id: 2, type: "Job", title: "Backend Developer", company: "Tech Corp", location: "Nigeria", salary: "₦250k – ₦350k/month" },
-    { id: 3, type: "Scholarship", title: "Google Africa Developer Scholarship", company: "Google", location: "International", salary: "₦20k – ₦50k/month stipend" },
-    { id: 4, type: "Competition", title: "Campus Innovation Challenge", company: "FutureLabs", location: "Nigeria", salary: null },
-    { id: 5, type: "Internship", title: "Product Design Intern", company: "Flutterwave", location: "Remote", salary: "₦180k – ₦240k/month" },
-    { id: 6, type: "Job", title: "Data Analyst", company: "Andela", location: "Nigeria", salary: "₦320k – ₦400k/month" },
-    { id: 7, type: "Scholarship", title: "MTN Foundation STEM Scholarship", company: "MTN Nigeria", location: "Nigeria", salary: "₦100k – ₦150k/term" },
-    { id: 8, type: "Job", title: "DevOps Engineer", company: "Paystack", location: "Remote", salary: "₦450k – ₦600k/month" },
-  ];
 
   const typeColors: Record<string, string> = {
     Internship: "bg-[#F2A93C]/15 text-[#8A5A12]",
@@ -201,9 +192,9 @@ export default function OpportunityList() {
             ) : (
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 {filteredOpportunities.map((opp) => (
-                <a  
-                    href="#"
+                <Link  
                     key={opp.id}
+                    to={`/OpportunityDetails/${opp.id}`}
                     className="group flex flex-col justify-between rounded-2xl border border-[#E7E5DF] bg-white p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_16px_32px_-16px_rgba(16,19,26,0.25)]"
                   >
                     <div>
@@ -236,7 +227,7 @@ export default function OpportunityList() {
                         className="text-[#9AA0AD] transition-colors group-hover:text-[#10131A]"
                       />
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
             )}
