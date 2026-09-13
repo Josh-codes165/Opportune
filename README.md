@@ -1,94 +1,243 @@
 # Opportune
 
-**Discover opportunities. Find what's next.**
+> Discover opportunities. Build your future.
 
-Opportune is a frontend project built to make it easier for people to discover and explore opportunities such as internships, jobs, scholarships, fellowships, hackathons, grants, and competitions.
+Opportune is a modern opportunity discovery platform designed to help people find and explore internships, jobs, scholarships, competitions, fellowships, and other career-building opportunities.
 
-The project was created as a frontend challenge to practice building a real-world, responsive platform with search, filtering, opportunity discovery, and detailed opportunity pages.
+The project was built as a frontend development challenge with a focus on creating a clean, responsive, and intuitive experience for discovering opportunities.
 
-##  Features
+## Live Demo
 
-*  **Homepage** — Introduction to the platform and featured opportunities
-*  **Search** — Search opportunities by title, skill, company, or keyword
-*  **Filters** — Filter opportunities by category, location, experience level, and more
-*  **Opportunity Listings** — Browse available opportunities through organized cards
-*  **Opportunity Details** — View full information about an opportunity
-*  **Apply CTA** — Easily navigate to the application process
-*  **Responsive Design** — Optimized for desktop, tablet, and mobile devices
+https://opportune-sigma.vercel.app/
 
-## 🛠️ Tech Stack
+## Repository
 
-* React
-* TypeScript
-* Tailwind CSS
-* Lucide React
-* Vite
+https://github.com/Josh-codes165/Opportune
 
-##  Project Structure
+---
+
+## Features
+
+###  Homepage
+
+A clean landing page that introduces the platform and highlights selected opportunities.
+
+###  Opportunity Discovery
+
+Users can browse available opportunities through a dedicated opportunity listing page.
+
+###  Search
+
+Search for opportunities by title, company, skill, or keyword.
+
+### Filters
+
+Users can narrow down opportunities based on available categories and attributes.
+
+###  Opportunity Details
+
+Each opportunity has its own details page containing:
+
+- Opportunity type
+- Organization
+- Location
+- Salary or stipend
+- Deadline
+- Experience level
+- Duration
+- Description
+- Responsibilities
+- Requirements
+- Nice-to-have skills
+- Benefits
+
+###  Apply CTA
+
+Each opportunity provides a clear call-to-action for users who want to apply.
+
+### Responsive Design
+
+The interface is designed to work across:
+
+- Desktop
+- Tablet
+- Mobile
+
+### Reusable Components
+
+The application uses reusable React components to keep the codebase organized and maintainable.
+
+
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- Lucide React
+- Git & GitHub
+- Vercel
+
+
+
+## Project Structure
 
 ```text
 src/
 ├── assets/
-├── components/
-├── pages/
+├── Components/
+│   ├── Footer.tsx
+│   ├── Navbar.tsx
+│   ├── OpportunityCard.tsx
+│   └── ...
+│
 ├── data/
+│   └── opportunities.ts
+│
+├── pages/
+│   ├── Home.tsx
+│   ├── OpportunityList.tsx
+│   ├── OpportunityDetails.tsx
+│   └── ...
+│
 ├── App.tsx
-└── main.tsx
-```
+├── main.tsx
+└── index.css
 
-The project follows a component-based structure to keep the codebase organized, reusable, and easy to maintain.
 
-##  Getting Started
 
-### Clone the repository
 
-```bash
-git clone <https://github.com/Josh-codes165/Opportune>
-```
+How It Works
 
-### Navigate into the project
+Opportune uses a centralized opportunity data structure.
 
-```bash
-cd opportune
-```
+Each opportunity contains information such as:
 
-### Install dependencies
+{
+  id: 1,
+  type: "Internship",
+  title: "Frontend Developer Intern",
+  company: "Technova",
+  location: "Remote",
+  salary: "₦200,000 – ₦300,000/month",
+  deadline: "2026-10-15",
+  req: "React · TypeScript"
+}
 
-```bash
+The same opportunity data can then be used across different parts of the application.
+
+For example:
+
+Homepage
+   ↓
+Featured Opportunity
+   ↓
+Opportunity Details
+   ↓
+Apply
+
+This keeps the application consistent and avoids duplicating opportunity information across multiple pages.
+
+
+
+Getting Started
+
+1. Clone the repository
+
+git clone https://github.com/Josh-codes165/Opportune.git
+
+2. Navigate into the project
+
+cd Opportune
+
+3. Install dependencies
+
 npm install
-```
 
-### Start the development server
+4. Start the development server
 
-```bash
 npm run dev
-```
 
-The application will then be available through the local development URL provided by Vite.
+The application will be available at the local development URL provided by Vite.
 
-##  Project Goal
 
-The goal of Opportune is to create a simple and intuitive experience for discovering opportunities without overwhelming users with unnecessary information.
 
-This project also serves as a practical frontend challenge for improving my skills in:
+Build for Production
 
-* React and TypeScript
-* Responsive UI development
-* Component architecture
-* Search and filtering logic
-* Routing and page navigation
-* Building interfaces from a product brief
+To create a production build:
 
-##  Status
+npm run build
 
-Opportune is currently a frontend project and is being developed as part of a frontend challenge.
+To preview the production build locally:
 
-More features and improvements may be added as development continues.
+npm run preview
 
-##  Author
 
-**Joshua Okoronkwo**
 
-Frontend Developer & Computer Engineering Student.
+Design Goals
 
-Built with curiosity, code, and a little pressure from exam season.
+The main design goals for Opportune were:
+
+Keep opportunity discovery simple
+
+Make important information easy to scan
+
+Create clear calls-to-action
+
+Maintain a consistent visual hierarchy
+
+Provide a responsive experience
+
+Keep the codebase reusable and maintainable
+
+
+
+
+Future Improvements
+
+Possible improvements for future versions include:
+
+User authentication
+
+Saved/bookmarked opportunities
+
+User profiles
+
+Application tracking
+
+Real opportunity data from APIs
+
+Personalized opportunity recommendations
+
+Email notifications for deadlines
+
+Advanced filtering
+
+Organization/company profiles
+
+Admin dashboard for managing opportunities
+
+
+
+
+Disclaimer
+
+The opportunities currently displayed in the demo are sample data created for demonstration purposes. They should not be treated as verified or currently available job, internship, scholarship, or competition listings.
+
+
+
+Author
+
+Joshua Okoronkwo
+
+Frontend Developer and Computer Engineering Student.
+
+Built with React, TypeScript, Tailwind CSS and a lot of late-night debugging.
+
+
+
+License
+
+This project was created for educational and portfolio purposes.
