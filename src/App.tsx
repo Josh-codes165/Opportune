@@ -8,6 +8,7 @@ import Footer from './Components/Footer'
 import { Routes, Route } from 'react-router-dom'
 import OpportunityList from './Pages/OpportunityList'
 import OpportunityDetails from './Pages/OpportunityDetails'
+import {useScrollToHash} from './hooks/ScrollToHash'
 
 
 function Home() {
@@ -22,7 +23,8 @@ function Home() {
 }
 
 function App() {
-  return (
+  useScrollToHash();
+  return (  
     <>
       <NavBar />
       <Routes>

@@ -7,7 +7,7 @@ export default function STATS() {
   ];
 
   return (
-    <section className="bg-[#F6F4EF] px-6 py-20 md:py-24">
+    <section id="statistics" className="bg-[#F6F4EF] px-6 py-20 md:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-[#10131A] sm:text-4xl">

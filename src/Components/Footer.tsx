@@ -1,13 +1,35 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   const columns = [
     {
       heading: "Explore",
       links: [
-        "Opportunities",
-        "Internships",
-        "Scholarships",
-        "Fellowships",
-        "Competitions",
+        {
+          id: 1,
+          Name: "Opportunities",
+          to: '/OpportunityList'
+        },
+         {
+          id: 2,
+          Name: "How it works",
+          to: '/#how-it-works'
+        },
+        {
+          id: 3,
+          Name: "Statistics",
+          to: '/#statistics'
+        },
+        {
+          id: 4,
+          Name: "Fellowships",
+          to: '/'
+        },
+        {
+          id: 5,
+          Name: "Competitions",
+          to: '/'
+        },
       ],
     },
     {
@@ -45,13 +67,13 @@ export default function Footer() {
               </h3>
               <ul className="mt-4 flex flex-col gap-3">
                 {col.links.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
+                  <li key={link.id}>
+                    <Link
+                      to={link.to}
                       className="text-sm text-[#8B8F99] transition-colors hover:text-white"
                     >
-                      {link}
-                    </a>
+                      {link.Name}
+                    </Link>
                   </li>
                 ))}
               </ul>
